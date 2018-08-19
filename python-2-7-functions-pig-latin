@@ -1,0 +1,11 @@
+# ACG Python for Beginners
+# 2.7 Functions
+# Pig latin translation function
+
+def igpay(word):
+     vowels = "aeiouAEIOU"
+     if word[0] in vowels:
+         return "Translation: " + word + "way"
+     else:
+         return "Translation: " + word[1:] + word[0] + "ay"
+         
