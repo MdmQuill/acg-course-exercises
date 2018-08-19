@@ -1,0 +1,36 @@
+# ACG Python for Beginners
+# 2.7 Functions
+# Roman numeral conversion function
+
+def numerus(roman):
+	#convert string arg into list
+    rl = list(roman.lower())
+	err = "This is not a valid roman numeral."
+	
+    #convert letters to ints in list
+	for char in range(len(rl)): 
+        if rl[char] == "i":
+            rl[char] = 1
+		elif rl[char] == "v":
+			rl[char] = 5
+		elif rl[char] == "x":
+			rl[char] = 10
+		elif rl[char] == "l":
+			rl[char] = 50
+		elif rl[char] == "c":
+			rl[char] = 100
+		elif rl[char] == "m":
+			rl[char] = 1000
+		else:
+			return err
+	
+	#add the last number to result n
+	n = rl[-1]
+	#iterate through rest of the list backwards to determine calcs
+	i = -1
+	for num in list(reversed(rl[:-1])):
+		if num < rl[i]:
+			n = n - num; i -= 1
+		else: n = n + num; i -= 1
+	return n
+	
