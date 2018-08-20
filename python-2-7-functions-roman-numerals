@@ -1,5 +1,5 @@
 # ACG Python for Beginners
-# 2.7 Functions
+# Ch 2.5 Functions
 # Roman numeral conversion function
 
 def numerus(roman):
