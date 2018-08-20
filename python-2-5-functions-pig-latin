@@ -1,5 +1,5 @@
 # ACG Python for Beginners
-# 2.7 Functions
+# Ch 2.5 Functions
 # Pig latin translation function
 
 def igpay(word):
